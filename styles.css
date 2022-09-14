@@ -190,3 +190,12 @@ button {
     flex-direction: column;
   }
 }
+@media only screen and (min-width: 701px) {
+  /* .box-container {
+    padding: 0 20px;
+    width: 100%;
+  } */
+  #histories {
+    flex-direction: row;
+  }
+}
