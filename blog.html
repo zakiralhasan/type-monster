@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog page</title>
+    <!-- tailwind cdn link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200">
+    <header class="bg-gray-700 mb-8 px-3 py-12 text-center text-bolder ">
+        <div class="text-white flex justify-between w-full md:w-3/4 mx-auto  ">
+            <h1 class="text-4xl ">JS Blog</h1>
+            <img class="w-16 h-16 rounded-full" src="js.png" alt="">
+        </div>
+    </header>
+    <main class="w-full md:w-3/4 mx-auto p-2 m:p-6">
+        <div class="bg-white my-5 rounded p-4 shadow-lg">
+            <h1 class="text-3xl text-semibold mb-3">What is the difference between local storage and session storage?</h1>
+            <div >
+                <p>The Storage interface of the <strong>Web Storage API</strong>  provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.</p>
+                <p class="text-xl mt-2">Local storage:</p>
+                <ul class="list-disc list-inside">
+                    <li>Local storage data has no expiration limit, even if the browser or session is closed.</li>
+                    <li>It store key/value pairs for a particular domain.</li>
+                    <li>The values stored may only be strings.</li>
+                </ul>
+                <p class="text-xl mt-2">Session storage:</p>
+                <ul class="list-disc list-inside">
+                    <li>Session storage data is deleted after the browser or session is closed.</li>
+                    <li>Session storage store the data key/value pairs for a particular domain.</li>
+                    <li>The values stored may only be strings.</li>
+                </ul>
+                
+                <p></p>
+            </div>
+        </div>
+        <div class="bg-white my-5 rounded p-4 shadow-lg">
+            <h1 class="text-3xl text-semibold mb-3">What is the difference between global scope and block scope?</h1>
+            <div>
+                <p class="text-xl mt-2">Global scope:</p>
+                <p>A variable exists inside or outside a block. If a variable is declared outside all functions or curly braces ({}), it exists in the <strong>global scope</strong>. The global variables can be accessed by any line of code in the program, including inside blocks.</p>
+                <p class="text-xl mt-2">Block scope:</p>
+                <p>The variables that are declared within the block {} are called block scope. It cannot be accessible outside the block.</p>
+                
+                <p></p>
+            </div>
+        </div>
+        <div class="bg-white my-5 rounded p-4 shadow-lg">
+            <h1 class="text-3xl text-semibold mb-3">How javascript event loop work?</h1>
+            <div>
+                <p class="text-xl mt-2">Event loop's working procedure is given below:</p>
+                <p>1. Any variable declared is first stored in the memory <strong>Heap</strong>.</p>
+                <p>2. When a synchronous function is declared, it is placed on the <strong>Call stack</strong> as LIFO (last in fast out).</p>
+                <p>3. When an asynchronous function is declared, it is placed on the <strong>Web API</strong>.</p>
+                <p>4. After finishing the asynchronous functions work, it is placed on the <strong>Callback Queue</strong>.</p>
+                <p>5. Then <strong><i>event loop</i></strong> takes an asynchronous function from the <strong>Callback Queue</strong> and placed it in the <strong>Call stack</strong> if the call stack is free or no synchronous function's work is pending.</p>
+                <p><span>Summary:</span>Then <strong><i>event loop</i></strong> takes an asynchronous function from the <strong>Callback Queue</strong> and placed it in the <strong>Call stack</strong> if the call stack is free or no synchronous function's work is pending.</p>
+            </div>
+        </div>
+        <div class="bg-white my-5 rounded p-4 shadow-lg">
+            <h1 class="text-3xl text-semibold mb-3">When we will find "undefined" as a value of any variable in javascript?</h1>
+            <div>
+                <p class="text-xl mt-2">Some reasons for finding <strong>undefined</strong> as a value in Javascript are given below:</p>
+                <p>1. When declared any variable without value.</p>
+                <p>2. When called a function without declaration.</p>
+                <p>3. When trying to access a non-existing object property.</p>
+                <p>4. Without return statement, a JavaScript function returns undefined.</p>
+                <p>5. When trying to access an array element with an out-of-bounds index, etc.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-700 py-12">
+        <p class="text-white text-center text-xl ">Copyright 2022 for Dawn@blogspot. | All rights are resurved.</p>
+    </footer>
+</body>
+</html>
