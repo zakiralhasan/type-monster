@@ -12,12 +12,14 @@ let startTime;
 let questionText = "";
 
 // Load and display question
-fetch("./texts.json")
+const fetchData = () => {
+  fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
     question.innerHTML = questionText;
   });
+}
 
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
@@ -93,6 +95,8 @@ const gameOver = () => {
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
+  //below function called for fetching new data after every finished typing
+  fetchData();
 };
 
 const closeModal = () => {
@@ -137,3 +141,6 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
+
+// below function called for fetching data to typing
+fetchData();
