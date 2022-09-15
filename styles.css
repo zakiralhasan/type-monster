@@ -21,6 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 9px;
   color: white;
   font-size: 25px;
   border-radius: 15px;
@@ -39,9 +40,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-left: 5rem;
+  padding-left: 1rem;
   color: white;
-  font-size: 32px;
+  font-size: 27px;
   background-color: #171717;
   border: 2px solid #9dffad;
   border-radius: 15px;
@@ -189,13 +190,26 @@ button {
   .card {
     flex-direction: column;
   }
+  #question {
+    font-size: 20px;
+  }
+  #display{
+    font-size: 23px;
+    padding-left: 1rem;
+    padding-bottom: 7rem;
+  }
 }
 @media only screen and (min-width: 701px) {
-  /* .box-container {
-    padding: 0 20px;
-    width: 100%;
-  } */
   #histories {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+    margin-bottom: 15px;
+  }
+  .card {
+    display: block;
+  }
+  .card-h3-tag{
+    margin-bottom: 10px;
   }
 }
