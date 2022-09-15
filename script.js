@@ -110,6 +110,9 @@ const start = () => {
 
   let count = 3;
   countdownOverlay.style.display = "flex";
+  
+  //not show zero on the countdown display
+  countdownOverlay.innerHTML = '';
 
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
